@@ -20,6 +20,7 @@ describe('MainContent', () => {
     const button = screen.getByRole('button');
     await userEvent.click(button);
     // below is a type. 'help-are' should be 'help-area'. This typo was created intentionally to trigger a test failure and check workflow conditional statements.
-    expect(screen.getByTestId('help-are')).toBeInTheDocument();
+    // expect(screen.getByTestId('help-are')).toBeInTheDocument();
+    expect(screen.getByTestId('help-area')).toBeInTheDocument();
   });
 });
